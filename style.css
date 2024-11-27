@@ -33,6 +33,7 @@ ul li a{
     text-decoration: none;
     color: white;
     position: relative;
+    cursor: pointer;
 }
 
 ul li a::after{
@@ -59,17 +60,199 @@ main .firstsection{
 main .firstsection .left{
     width: 40%;
     font-size: 24px;
+    text-align: center;
 }
 main .firstsection .left #first{
-    font-size: 30px;
+    font-size: 50px;
 }
 main .firstsection .left #first span{
     color: rgb(179, 106, 248);
-    font-size: 34px;
+    font-size: 54px;
 }
 main .firstsection .img{
     width: 80%;
 }
 main .firstsection .right{
     width: 40%;
+}
+.separation{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.separation .line{
+    width: 98%;
+    height: 4px;
+    background-color: white;
+}
+.about{
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+/* About section */
+.leftsec{
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftsec .about-img{
+    width: 100%;
+    border-radius: 6px;
+}
+.rightsec{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.rightsec .title{
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+.rightsec .content{
+    font-size: 20px;
+    color: rgba(245, 240, 240, 0.927);
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social *{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    margin: 0px 20px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.social *:hover{
+    transform: translateY(-6px);
+}
+.social .leetcode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0px;
+}
+.social .leetcode img{
+    width: 46px;
+}
+
+/* Education Section */
+.education h1{
+    font-size: 50px;
+    color: white;
+    padding: 0px 30px;
+}
+.education .education-items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+}
+.education .education-item{
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 12px 10px;
+    width: 30%;
+}
+.education .education-item h3{
+    color: rgb(179, 106, 248);
+    padding: 20px 0px;
+}
+
+
+/* Skills section */
+.separation-small{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.separation-small .line{
+    width: 96%;
+    height: 1px;
+    background-color: white;
+}
+.skills{
+    color: white;
+    padding: 0px 30px;
+    font-size: 16px;
+}
+.skills i{
+    color: white;
+    font-size: 40px;
+    margin-right: 10px;
+}
+.skills span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills img{
+    width: 45px;
+    margin-right: 10px;
+}
+.skills h1{
+    font-size: 50px;
+    color: white;
+    padding-bottom: 20px;
+}
+.skills h2{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom:20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+/* Project's Section */
+
+.Project{
+    color: white;
+    padding: 0px 30px;
+    font-size: 16px;
+}
+.Project h1{
+    font-size: 50px;
+}
+
+/* Contact-me section */
+.contact-me{
+    color: white;
+    padding: 0px 30px;
+    font-size: 16px;
+}
+.contact-me h1{
+    font-size: 50px;
+
+}
+.contact-me .contact-sec{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-me .contact-sec .left-contact{
+    flex-basis: 40%;
+}
+.contact-me .contact-sec .left-contact *{
+    margin: 10px 0px;
+}
+.left-contact .social{
+    display: flex;
+    justify-content: flex-start;
+}
+.left-contact .social *{
+    margin: 0px 20px;
+}
+.contact-me .contact-sec .right-contact{
+    flex-basis: 40%;
 }
