@@ -49,6 +49,10 @@ ul li a::after{
 ul li a:hover:after{
     width: 100%;
 }
+html{
+    scroll-behavior:smooth;
+}
+/* First section */
 main .firstsection{
     display: flex;
     justify-content: space-around;
@@ -69,11 +73,11 @@ main .firstsection .left #first span{
     color: rgb(179, 106, 248);
     font-size: 54px;
 }
-main .firstsection .img{
-    width: 80%;
-}
 main .firstsection .right{
     width: 40%;
+}
+main .firstsection .img{
+    width: 80%;
 }
 .separation{
     display: flex;
@@ -85,13 +89,13 @@ main .firstsection .right{
     height: 4px;
     background-color: white;
 }
+/* About section */
 .about{
     padding: 0px 30px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
 }
-/* About section */
 .leftsec{
     flex-basis: 35%;
     display: flex;
@@ -234,25 +238,234 @@ main .firstsection .right{
 }
 .contact-me h1{
     font-size: 50px;
-
 }
 .contact-me .contact-sec{
     display: flex;
     justify-content: space-between;
 }
 .contact-me .contact-sec .left-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-basis: 40%;
 }
 .contact-me .contact-sec .left-contact *{
-    margin: 10px 0px;
+    margin: 10px 5px;
 }
 .left-contact .social{
     display: flex;
     justify-content: flex-start;
 }
-.left-contact .social *{
-    margin: 0px 20px;
-}
 .contact-me .contact-sec .right-contact{
     flex-basis: 40%;
+}
+.contact-me .contact-sec .right-contact h3{
+    font-size: 24px;
+}
+.right-contact .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-contact .form input,textarea{
+    margin: 20px 0px;
+    padding: 14px;
+    background-color: #262626;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+.right-contact .form .submit{
+    background-color: #ff004f;
+    color: white;
+    border: 2px solid #ff004f;
+    border-radius: 4px;
+    padding:8px 14px;
+    font-size: 20px;
+}
+
+/* Footer Content */
+
+.footer-content{
+    width: 100%;
+    padding: 20px;
+    background-color:rgb(15, 15, 48);
+    color: white;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 24px;
+    padding: 20px 0px;
+}
+.footer-content p{
+    font-size: 14px;
+    color: rgba(245, 240, 240, 0.927);
+}
+
+/* media queries */
+nav .menu{
+    display: none;
+}
+
+@media  screen and (max-width:950px) {
+    /* nav bar */
+    nav .menu{
+        display: block;
+        font-size: 25px;
+        color: white;
+    }
+    nav .right ul{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background-color: rgb(15, 15, 48);
+        height: 100vh;
+        width: 250px;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav .right ul li{
+        display: block;
+        margin: 30px;
+    }
+    nav ul .menu{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    /* first section */
+    main .firstsection .left{
+        font-size: 20px;
+    }
+    main .firstsection .left #first{
+        font-size: 30px;
+    }
+    main .firstsection .left #first span{
+        font-size: 34px;
+    }
+    main .firstsection .img{
+        width: 100%;
+    }
+    /* About section */
+    .rightsec .title{
+        font-size: 30px;
+    }
+    .rightsec .content{
+        font-size: 16px;
+    }
+    .rightsec .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightsec .social *{
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: transform 0.5s;
+    }
+    .rightsec .social *:hover{
+        transform: translateY(-6px);
+    }
+    .rightsec .social .leetcode img{
+        width: 23px;
+    }
+    /* Education section */
+    .education h1{
+        font-size: 30px;
+    }
+    .education .education-item{
+        font-size: 16px;
+    }
+    .education .education-item h3{
+        font-size: 20px;
+        color: rgb(179, 106, 248);
+        padding: 20px 0px;
+    }
+    
+}
+@media screen and (max-width:800px){
+    /* Education section */
+    .education h1{
+        font-size: 50px;
+    }
+    .education .education-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .education .education-item{
+        width: 90%;
+    }
+    .education .education-item h3{
+        color: rgb(179, 106, 248);
+        padding: 20px 0px;
+    }
+    /* skills section */
+    .grid{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: space-around;
+        row-gap: 50px;
+    }
+
+    /* contact section */
+    .contact-me .contact-sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-me .contact-sec .left-contact{
+        width: 90%;
+    }
+    .contact-me .contact-sec .right-contact{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:700px){
+    main .firstsection{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main .firstsection .right{
+        width: 90%;
+    }
+    main .firstsection .img{
+        width: 90%;
+    }
+    main .firstsection .left{
+        width: 90%;
+        text-align:center;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+    .rightsec{
+        width: 100%;
+    }
+    .rightsec .social *{
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+
+    }
+    .rightsec .social .leetcode img{
+        width: 33px;
+    }
 }
