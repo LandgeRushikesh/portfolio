@@ -2,7 +2,8 @@ let openMenu = document.getElementById("open")
 let closeMenu = document.getElementById("close")
 let sidemenu = document.querySelector(".sidemenu")
 let gitLink = document.querySelector(".git-link")
-let projectCard = document.querySelector(".project-card")
+let projectCard = document.querySelectorAll(".project-card")
+let see = document.querySelector(".see")
 
 let OpenMenuBar = ()=>{
     sidemenu.style.right = "0"
@@ -18,10 +19,23 @@ openMenu.addEventListener("click",()=>{
 closeMenu.addEventListener("click",()=>{
     closeMenuBar();
 })
-
-projectCard.addEventListener("mouseover",()=>{
-    gitLink.classList.remove("display-none")
-})
-projectCard.addEventListener("mouseout",()=>{
-    gitLink.classList.add("display-none")
+for(let i=3;i<projectCard.length;i++){
+    projectCard[i].style.display = "none"
+}
+see.addEventListener("click",()=>{
+    console.log("click")
+    if(see.classList.contains("see-less")){
+        for(let i=3;i<projectCard.length;i++){
+            projectCard[i].style.display = "none"
+        }
+        see.innerText = "See More"
+        see.classList.remove("see-less");
+    }
+    else{
+        for(let i=3;i<projectCard.length;i++){
+            projectCard[i].style.display = "grid"
+        }
+        see.innerText = "See Less"
+        see.classList.add("see-less");
+    }
 })

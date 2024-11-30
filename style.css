@@ -236,9 +236,14 @@ main .firstsection .img{
     font-size: 50px;
     margin-bottom: 8px;
 }
+.project-section{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    row-gap: 50px;
+}
 .project-card{
     background-color: rgb(15, 15, 48);
-    width: 30%;
     padding: 20px;
     border: 4px solid white;
     border-radius: 10px;
@@ -264,6 +269,21 @@ main .firstsection .img{
 .project-card a i{
     font-size: 30px;
     color: white;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0px;
+}
+.button .see{
+    padding: 10px 16px;
+    background: none;
+    border: 4px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
 }
 .show{
     display: none;
@@ -409,16 +429,16 @@ nav .menu{
     }
     .rightsec .social *{
         color: white;
-        font-size: 20px;
+        font-size: 34px;
         cursor: pointer;
-        margin-top: 10px;
+        margin: 10px 10px;
         transition: transform 0.5s;
     }
     .rightsec .social *:hover{
         transform: translateY(-6px);
     }
     .rightsec .social .leetcode img{
-        width: 23px;
+        width: 37px;
     }
     /* Education section */
     .education h1{
@@ -432,7 +452,13 @@ nav .menu{
         color: rgb(179, 106, 248);
         padding: 20px 0px;
     }
-    
+    /* project section */
+    .project-section{
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+    }
+
 }
 @media screen and (max-width:800px){
     /* Education section */
@@ -460,7 +486,20 @@ nav .menu{
         justify-content: space-around;
         row-gap: 50px;
     }
-
+    /* Project section */
+    .project-section{
+        display: grid;
+        grid-template-columns: 1fr ;
+        justify-content: space-between;
+        row-gap: 50px;
+    }
+    .project-card{
+        background-color: rgb(15, 15, 48);
+        padding: 20px;
+        border: 4px solid white;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
     /* contact section */
     .contact-me .contact-sec{
         display: flex;
