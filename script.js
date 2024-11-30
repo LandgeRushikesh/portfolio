@@ -35,7 +35,7 @@ see.addEventListener("click",()=>{
         for(let i=3;i<projectCard.length;i++){
             projectCard[i].style.display = "grid"
         }
-        see.innerText = "See Less"
+        see.innerHTML = `<a href="#Project-sec">See Less</a>`
         see.classList.add("see-less");
     }
 })
