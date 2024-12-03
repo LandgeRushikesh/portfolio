@@ -4,6 +4,7 @@ let sidemenu = document.querySelector(".sidemenu")
 let gitLink = document.querySelector(".git-link")
 let projectCard = document.querySelectorAll(".project-card")
 let see = document.querySelector(".see")
+let form = document.querySelector("form")
 
 let OpenMenuBar = ()=>{
     sidemenu.style.right = "0"
@@ -38,4 +39,30 @@ see.addEventListener("click",()=>{
         see.innerHTML = `<a href="#Project-sec">See Less</a>`
         see.classList.add("see-less");
     }
+})
+
+// Form submission 
+let confirmationMsg = document.querySelector(".confirmation-msg")
+
+confirmationMsg.style.display = "none";
+
+let collectData = () =>{
+    let name = document.querySelector("#name").value
+    let email = document.querySelector("#email").value
+    let msg = document.querySelector("#message").value
+    localStorage.setItem("name",name)
+    localStorage.setItem("email",email)
+    localStorage.setItem("message",msg)
+}
+
+form.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    collectData();
+
+    confirmationMsg.style.display = "block"
+
+    setTimeout(()=>{
+        confirmationMsg.style.display = "none"
+        form.reset();
+    },5000)
 })

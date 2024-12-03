@@ -352,6 +352,11 @@ main .firstsection .img{
 .right-contact .form .submit:hover{
     transform: scale(1.1);
 }
+.confirmation-msg {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
 /* Footer Content */
 
 .footer-content{
