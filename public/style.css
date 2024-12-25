@@ -226,6 +226,18 @@ main .firstsection .img{
     justify-content: space-between;
     row-gap: 50px;
 }
+/* scroll effect */
+
+.logo{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out ;
+}
+
+.visible{
+    opacity: 1;
+    transform: translateY(0px) ;
+}
 
 /* Project's Section */
 .Project{

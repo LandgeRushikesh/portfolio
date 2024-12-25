@@ -40,6 +40,31 @@ see.addEventListener("click",()=>{
     }
 })
 
+// Scroll effect
+let logos = document.querySelectorAll(".logo")
+
+// Add an event listener to detect when the user scrolls the page
+document.addEventListener("scroll", () => {
+    for (let logo of logos) {
+        // Get the vertical position of the logo relative to the document
+        let logoTop = logo.offsetTop;
+
+        // Get the height of the logo element
+        let logoHeight = logo.offsetHeight;
+
+        // Calculate the position of the bottom edge of the viewport
+        let windowBottom = window.scrollY + window.innerHeight;
+
+        // Check if any part of the logo is within the visible viewport
+        if (windowBottom > logoTop && window.scrollY < logoTop + logoHeight) {
+            logo.classList.add("visible");
+        } else {
+            logo.classList.remove("visible");
+        }
+    }
+});
+
+
 // Form submission 
 let confirmationMsg = document.querySelector(".confirmation-msg")
 
