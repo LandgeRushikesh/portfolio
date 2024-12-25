@@ -35,7 +35,6 @@ let messageSchema = new schema({
 const message = mongoose.model("message",messageSchema)
 
 app.post("/submit",(req,res)=>{
-    console.log(req.body)
     const {Name,Email,Message} = req.body
 
     const newData = new message({
