@@ -44,6 +44,12 @@ app.post("/submit",(req,res)=>{
         Message
     })
     newData.save();
+
+    setTimeout(()=>{
+        res.redirect('/#Contact-sec')
+    },3000)
+
+    
 })
 
 app.listen(port,()=>{

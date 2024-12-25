@@ -71,13 +71,11 @@ let confirmationMsg = document.querySelector(".confirmation-msg")
 confirmationMsg.style.display = "none";
 
 
-form.addEventListener("submit",(event)=>{
-    event.preventDefault()
+form.addEventListener("submit",()=>{
 
     confirmationMsg.style.display = "block"
 
     setTimeout(()=>{
         confirmationMsg.style.display = "none"
-        form.reset();
-    },5000)
+    },3000)
 })
