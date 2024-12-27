@@ -77,6 +77,19 @@ main .firstsection .left #first span{
     color: rgb(179, 106, 248);
     font-size: 54px;
 }
+main .firstsection .left #second{
+    margin-bottom: 28px;
+}
+.resume-download{
+    background-color: #ff004f;
+    border: 4px solid #ff004f;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 3s;
+}
+.resume-download:hover{
+    transform: scale(1.1);
+}
 main .firstsection .right{
     width: 40%;
 }
